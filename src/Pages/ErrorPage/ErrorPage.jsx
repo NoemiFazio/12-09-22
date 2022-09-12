@@ -13,7 +13,7 @@ function ErrorPage(props) {
         "Errooor!!"
       )}
       <button className={styles.button}>
-        <Link to="/" title="Torna alla Homepage">
+        <Link className={styles.link} to="/" title="Torna alla Homepage">
           Home
         </Link>
       </button>
