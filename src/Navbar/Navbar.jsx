@@ -9,13 +9,19 @@ function Navbar() {
   ];
 
   return (
-    <nav className={styles.nav}>
+    <nav className={styles.nav} aria-label="Barra di navigazione">
       <ul>
-        <img src={logo} className={styles.Logo} alt="logo" />
+        <img
+          src={logo}
+          className={styles.Logo}
+          alt="logo"
+          aria-label="Logo del sito"
+        />
         {links.map(({ href, label, title }) => (
           <li className={styles.li} key={href}>
             <NavLink
               to={href}
+              aria-label={title}
               title={title ? title : label}
               style={({ isActive }) => ({
                 pointerEvents: isActive ? "none" : "auto",
